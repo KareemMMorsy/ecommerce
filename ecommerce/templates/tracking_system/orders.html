@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+{% extends "base.html" %}
+
+
 <body>
-    <h1>hello from orders</h1>
+    {% block content %}
+    <table>
+        
+        
+        {% for order in orderlist %}
+        <tr>
+            {% if order == orderlist.0 %}
+            <th>{{order.orderId}}</th>
+            <th>{{order.orderName}}</th>
+            <th>{{order.userName}}</th>
+            <th>{{order.status}}</th>
+            {% else %}
+            <td>{{order.orderId}}</td>
+            <td>{{order.orderName}}</td>
+            <td>{{order.userName}}</td>
+            <td>{{order.status}}</td>
+            {% endif %} 
+
+        </tr>
+        {% endfor %}
+        
+
+    </table>
+    {% endblock content %} 
 </body>
 </html>
