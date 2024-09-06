@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tracking_system.apps.TrackingSystemConfig',
     'mart.apps.MartConfig',
-    'products.apps.ProductsConfig'
+    'products.apps.ProductsConfig',
+    'users_auth.apps.UsersAuthConfig'
     
 ]
 

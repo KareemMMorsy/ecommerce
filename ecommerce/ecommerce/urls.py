@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ts/',include('tracking_system.urls')),
     path('',include('mart.urls')),
+    path('usersauth/',include('users_auth.urls'))
 ]
 if settings.DEBUG:  # Only serve media files during development
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
