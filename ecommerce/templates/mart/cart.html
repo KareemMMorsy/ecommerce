@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    hello from cart
+    <table border='1px'>
+        <tr>
+            <th>prodName</th>
+            <th>prodPrice</th>
+            <th>prodDesc</th>
+            <th>prodPhoto</th>
+
+        </tr>
+
+        {% for prod in prodlist %}
+        <tr>
+            <td>{{prod.name}}</td>
+            <td>{{prod.price}}</td>
+            <td>{{prod.description}}</td>
+            <td><img src="{{ prod.photo.url }}" alt=""></td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
 </body>
 </html>
