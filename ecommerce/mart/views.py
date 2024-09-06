@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from products.models import Product
 
 # Create your views here.
 def cart(request):
-    return render(request,'mart/cart.html')
+    allproducts=Product.objects.all()
+    myprod=allproducts.filter(active=True)
+    return render(request,'mart/cart.html',{'prodlist':myprod})
